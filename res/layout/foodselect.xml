@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC266"
+    android:gravity="top|center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:paddingTop="120dip"
+        android:text="你可以选择吃这个……"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Small Text"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:paddingTop="5dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center" 
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:text="再摇一次" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:paddingTop="10dip"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button2"
+    
+        android:layout_width="172dip"
+        android:layout_height="wrap_content"
+        android:text="分享到人人网" />
+
+</LinearLayout>
