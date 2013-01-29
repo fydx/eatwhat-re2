@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class FOOD_EDIT extends Activity {
 	static public int position=0;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);//»•µÙ±ÍÃ‚¿∏ 
 		setContentView(R.layout.foodedit);
 		button_yes = (Button) findViewById((R.id.button_yes));
 		button_reset = (Button) findViewById(R.id.button_reset);

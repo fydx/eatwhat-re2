@@ -18,6 +18,8 @@ import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView.AdapterContextMenuInfo;
@@ -38,6 +40,7 @@ public class FOOD_MANAGE extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);//»•µÙ±ÍÃ‚¿∏ 
 		setContentView(R.layout.foodmanage);
 		ListView list = (ListView) findViewById(R.id.listView1);
 		ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
