@@ -92,5 +92,6 @@
     <string name="renren_demo_pay_pay">点击支付</string>
     <string name="renren_demo_pay_open_repair">修复订单</string>
     <string name="title_activity_about">About</string>
+    <string name="title_activity_welc">Welc</string>
 
 </resources>

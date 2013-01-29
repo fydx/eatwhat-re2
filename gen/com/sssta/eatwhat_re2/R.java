@@ -121,24 +121,24 @@ public final class R {
         public static final int xiaoqi=0x7f02004b;
     }
     public static final class id {
-        public static final int ItemText=0x7f090013;
-        public static final int ItemTitle=0x7f090012;
-        public static final int MyListItem=0x7f090011;
-        public static final int button1=0x7f09000f;
-        public static final int button2=0x7f090010;
-        public static final int button_add=0x7f09000d;
-        public static final int button_finish=0x7f09000e;
-        public static final int button_reset=0x7f09000b;
-        public static final int button_yes=0x7f09000a;
-        public static final int imageView1=0x7f090015;
+        public static final int ItemText=0x7f090014;
+        public static final int ItemTitle=0x7f090013;
+        public static final int MyListItem=0x7f090012;
+        public static final int button1=0x7f090010;
+        public static final int button2=0x7f090011;
+        public static final int button_add=0x7f09000e;
+        public static final int button_finish=0x7f09000f;
+        public static final int button_reset=0x7f09000c;
+        public static final int button_yes=0x7f09000b;
+        public static final int imageView1=0x7f090000;
         public static final int imageView2=0x7f090016;
-        public static final int listView1=0x7f09000c;
+        public static final int listView1=0x7f09000d;
         public static final int menu_settings=0x7f090043;
-        public static final int name=0x7f090001;
-        public static final int place1=0x7f090003;
-        public static final int place2=0x7f090005;
-        public static final int price=0x7f090009;
-        public static final int rate=0x7f090007;
+        public static final int name=0x7f090002;
+        public static final int place1=0x7f090004;
+        public static final int place2=0x7f090006;
+        public static final int price=0x7f09000a;
+        public static final int rate=0x7f090008;
         public static final int renren_album_name_value=0x7f090023;
         public static final int renren_sdk_album_description_label=0x7f09001f;
         public static final int renren_sdk_album_description_value=0x7f090020;
@@ -183,31 +183,33 @@ public final class R {
         public static final int renren_status_pub_result_text=0x7f090042;
         public static final int renren_status_pub_text=0x7f090040;
         public static final int renren_status_publish=0x7f090041;
-        public static final int root=0x7f090014;
-        public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090002;
-        public static final int textView3=0x7f090004;
-        public static final int textView4=0x7f090006;
-        public static final int textView5=0x7f090008;
+        public static final int root=0x7f090015;
+        public static final int textView1=0x7f090001;
+        public static final int textView2=0x7f090003;
+        public static final int textView3=0x7f090005;
+        public static final int textView4=0x7f090007;
+        public static final int textView5=0x7f090009;
     }
     public static final class layout {
-        public static final int activity_welcome=0x7f030000;
-        public static final int foodadd=0x7f030001;
-        public static final int foodedit=0x7f030002;
-        public static final int foodmanage=0x7f030003;
-        public static final int foodselect=0x7f030004;
-        public static final int listitem=0x7f030005;
-        public static final int main=0x7f030006;
-        public static final int renren_sdk_create_album=0x7f030007;
-        public static final int renren_sdk_login_entry=0x7f030008;
-        public static final int renren_sdk_pay_repair=0x7f030009;
-        public static final int renren_sdk_pay_repair_item=0x7f03000a;
-        public static final int renren_sdk_status_pub=0x7f03000b;
-        public static final int renren_sdk_upload_photo=0x7f03000c;
-        public static final int renren_status_publish=0x7f03000d;
+        public static final int activity_welc=0x7f030000;
+        public static final int activity_welcome=0x7f030001;
+        public static final int foodadd=0x7f030002;
+        public static final int foodedit=0x7f030003;
+        public static final int foodmanage=0x7f030004;
+        public static final int foodselect=0x7f030005;
+        public static final int listitem=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int renren_sdk_create_album=0x7f030008;
+        public static final int renren_sdk_login_entry=0x7f030009;
+        public static final int renren_sdk_pay_repair=0x7f03000a;
+        public static final int renren_sdk_pay_repair_item=0x7f03000b;
+        public static final int renren_sdk_status_pub=0x7f03000c;
+        public static final int renren_sdk_upload_photo=0x7f03000d;
+        public static final int renren_status_publish=0x7f03000e;
     }
     public static final class menu {
         public static final int activity_about=0x7f080000;
+        public static final int activity_welc=0x7f080001;
     }
     public static final class string {
         public static final int albums_info=0x7f050034;
@@ -331,6 +333,7 @@ public final class R {
          */
         public static final int status_pub_title=0x7f050066;
         public static final int title_activity_about=0x7f050076;
+        public static final int title_activity_welc=0x7f050077;
         public static final int title_activity_welcome=0x7f050026;
         public static final int upload_photo=0x7f05002e;
         public static final int user_info_group=0x7f050031;
