@@ -5,8 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import com.renren.api.connect.android.Renren;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -19,9 +17,13 @@ import android.util.FloatMath;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.renren.api.connect.android.Renren;
 
 public class FOOD_SELECT extends Activity implements SensorEventListener{
 	private Button button;
@@ -37,13 +39,18 @@ public class FOOD_SELECT extends Activity implements SensorEventListener{
 	static long ltime =0 ;
 	private Renren renren;
 	private String toRenren;
+	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.foodselect);
+		Animation mAnimationRight; 
+		mAnimationRight = AnimationUtils.loadAnimation(this.getApplicationContext(), R.anim.rotate_right);
+		mAnimationRight.setFillAfter(true);   
 		sensorManager =(SensorManager)getSystemService(Context.SENSOR_SERVICE);
 		renren = getIntent().getParcelableExtra(Renren.RENREN_LABEL);
 		TextView resultView = (TextView) this.findViewById(R.id.textView2);
 		TextView resultview2 = (TextView) this.findViewById(R.id.textView3);
+		resultview2.setAnimation(mAnimationRight);  
 		File f = new File(android.os.Environment.getExternalStorageDirectory()
 				+ "/eatwhat/food.xml");
 		String path = f.getAbsolutePath();
