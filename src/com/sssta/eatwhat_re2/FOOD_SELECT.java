@@ -119,8 +119,9 @@ public class FOOD_SELECT extends Activity implements SensorEventListener{
 			myfood = foods.get(0);
 
 			sb.append(myfood.getName());
-			sb2.append(myfood.getPlace1()).append("-")
-					.append(myfood.getPlace2());
+		//	sb2.append(myfood.getPlace1()).append("-")
+		//			.append(myfood.getPlace2()); 
+			sb2.append(myfood.getPlace1());   //更改为只显示一级地点
 			resultView.setText(sb.toString());
 			resultview2.setText(sb2.toString());
 			toRenren=myfood.toRenren();

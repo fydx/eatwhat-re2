@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_background"
+    android:background="@drawable/result_background"
     android:orientation="vertical" >
 
     <ImageView
@@ -11,7 +11,7 @@
         android:layout_height="45dip"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="120dp"
         android:paddingLeft="5dip"
         android:src="@drawable/title_decoration" />
 
@@ -31,16 +31,6 @@
         android:text="分享到人人网"
         android:visibility="gone" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="24dp"
-        android:text="再摇一次"
-        android:visibility="gone" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -54,41 +44,51 @@
         android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="36dp"
-        android:src="@drawable/backgroung_beneath_photo" />
-
-    <ImageView
         android:id="@+id/tag_location"
-        android:layout_width="85dip"
-        android:layout_height="100dip"
+        android:layout_width="103dip"
+        android:layout_height="140dip"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
         android:src="@drawable/tag_location" />
 
     <ImageView
         android:id="@+id/tag_price"
-        android:layout_width="85dip"
-        android:layout_height="100dip"
-        android:layout_alignTop="@+id/tag_location"
-        android:layout_toRightOf="@+id/tag_location"
+        android:layout_width="100dip"
+        android:layout_height="135dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
         android:src="@drawable/tag_price" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tag_price"
+        android:background="@drawable/button_oncemore"
+        android:text="  " />
+
+    <TextView
+        android:id="@+id/text_oncemore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toLeftOf="@+id/button1"
+        android:text="Once More"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tag_location"
-        android:layout_alignRight="@+id/tag_location"
-        android:paddingBottom="20dp"
-        android:paddingTop="10dp"
+        android:layout_alignLeft="@+id/tag_location"
+        android:paddingBottom="33dp"
+        android:paddingRight="13dp"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="18sp" />
+        android:textSize="19dp" />
 
 </RelativeLayout>
