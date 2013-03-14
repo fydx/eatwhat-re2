@@ -136,7 +136,7 @@ public class FOOD_ADD extends Activity {
 						// Toast.makeText(this, "Ω‚Œˆ ß∞‹", Toast.LENGTH_LONG).show();
 					}
 					;*/
-					startActivity(new Intent(FOOD_ADD.this, FOOD_MANAGE.class));
+					//startActivity(new Intent(FOOD_ADD.this, FOOD_MANAGE.class));
 					finish();
 				}
 				else {

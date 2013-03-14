@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,12 +17,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
+import android.view.Window;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.Button;
 import android.widget.ListView;
@@ -36,7 +37,16 @@ public class FOOD_MANAGE extends Activity {
 	private int hasFile;
 	final int EDIT = 1;
 	final int DEL = 2;
-
+    private static final String defaultString = "<?xml version=\"1.0\"" +" standalone=\"yes\"?>"+
+    "<EAT><FoodList id=\"1\"><name>Simple Food 1</name>" +
+     " <place1>place 1</place1>" +
+     " <place2>place 2 </place2> " +
+     " <rate>5</rate> " +
+      " <price>6.00</price> " +
+   " </FoodList></EAT> " ;
+   
+    
+  
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,9 +83,28 @@ public class FOOD_MANAGE extends Activity {
 		String path = f.getAbsolutePath();
 		
 		File myfile = new File(path);
-		if (myfile.exists()) {
-			hasFile = 1;
+		if (!myfile.exists()) {
+	//		hasFile = 1;
+			File fe = new File(android.os.Environment.getExternalStorageDirectory()+"/eatwhat/food.xml");
+			try {
+				FileOutputStream fileOS=new FileOutputStream(fe);
+				try {
+					fileOS.write(defaultString.getBytes());
+					fileOS.flush();
+					fileOS.close();
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		Log.i("hasFile", String.valueOf(hasFile));
 		FileInputStream fileIS = null;
 		try {
 			fileIS = new FileInputStream(path);
@@ -128,7 +157,44 @@ public class FOOD_MANAGE extends Activity {
 			}
 		});
 	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(0, 0, 0, "添加食物");
+	//	menu.add(0, PLACE, 1, "人人账号关联");
+	//	menu.add(0, SETTING, 2, "关于");
+//		SubMenu place = menu.addSubMenu("MAIN")
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+		case 0:
+			Intent intent = new Intent();
+			/* 指定intent要启动的类 */
+			intent.setClass(FOOD_MANAGE.this, FOOD_ADD.class);
+			/* 启动一个新的Activity */
+			startActivity(intent);
+			/* 关闭当前的Activity */
+			//EatwhatActivity.this.finish();
+			break;
+	//	 item.setIntent(new Intent(this,FOOD_MANAGE.class));
 
+		/*case PLACE:
+			renrenauth();
+			break;			
+		case SETTING:
+			Intent intent2 = new Intent();
+			/* 指定intent要启动的类 */
+			//intent2.setClass(MainActivity.this, About.class);
+			/* 启动一个新的Activity */
+			//startActivity(intent2);
+			/* 关闭当前的Activity */
+			//EatwhatActivity.this.finish();
+		//	break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 	public boolean onContextItemSelected(MenuItem item) {
 		int selectedPosition = ((AdapterContextMenuInfo) item.getMenuInfo()).position;
 		switch (item.getItemId()) {
@@ -142,7 +208,7 @@ public class FOOD_MANAGE extends Activity {
 			String path = f.getAbsolutePath();
 			File myfile = new File(path);
 			if (myfile.exists()) {
-				hasFile = 1;
+		//		hasFile = 1;
 			}
 			FileInputStream fileIS = null;
 			try {

@@ -83,11 +83,24 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tag_location"
+        android:layout_alignBottom="@+id/tag_price"
         android:layout_alignLeft="@+id/tag_location"
+        android:layout_marginLeft="25dp"
         android:paddingBottom="33dp"
-        android:paddingRight="13dp"
+        android:paddingRight="40dp"
+        android:layout_marginBottom="10dp"
         android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/textView_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="Price"
+        android:layout_marginLeft="35dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="19dp" />
 

@@ -50,7 +50,9 @@ public class FOOD_SELECT extends Activity implements SensorEventListener{
 		renren = getIntent().getParcelableExtra(Renren.RENREN_LABEL);
 		TextView resultView = (TextView) this.findViewById(R.id.textView2);
 		TextView resultview2 = (TextView) this.findViewById(R.id.textView3);
-		resultview2.setAnimation(mAnimationRight);  
+		TextView resultView3 = (TextView)this.findViewById(R.id.textView_price);
+		resultview2.setAnimation(mAnimationRight);
+		resultView3.setAnimation(mAnimationRight);
 		File f = new File(android.os.Environment.getExternalStorageDirectory()
 				+ "/eatwhat/food.xml");
 		String path = f.getAbsolutePath();
@@ -93,14 +95,15 @@ public class FOOD_SELECT extends Activity implements SensorEventListener{
 			List<food> foods = PullBuildXML.readXml(fileIS);
 			StringBuilder sb = new StringBuilder();
 			StringBuilder sb2 = new StringBuilder();
+			StringBuilder sb3= new StringBuilder();
 			myfood = new food();
 			temp = new food();
-
+           //给每个事物设定一个随机数，10*评级
 			for (food food : foods) {
 				Log.w(TAG, food.toString());
 				food.setNum_random((int) (food.getRate() * Math.random() * 10));
 			}
-
+            //冒泡排序
 			for (int i = 1; i < foods.size(); i++) {
 				for (int j = 0; j < foods.size() - i; j++)
 
@@ -121,9 +124,12 @@ public class FOOD_SELECT extends Activity implements SensorEventListener{
 			sb.append(myfood.getName());
 		//	sb2.append(myfood.getPlace1()).append("-")
 		//			.append(myfood.getPlace2()); 
-			sb2.append(myfood.getPlace1());   //更改为只显示一级地点
+			sb2.append(myfood.getPlace1()); //更改为只显示一级地点
+			sb3.append(myfood.getPrice());
 			resultView.setText(sb.toString());
 			resultview2.setText(sb2.toString());
+			resultView3.setText(sb3.toString());
+			
 			toRenren=myfood.toRenren();
 
 		} catch (Exception e) {
